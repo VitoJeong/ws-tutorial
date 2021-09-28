@@ -1,0 +1,29 @@
+
+spring:
+  thymeleaf:
+    cache: false
+  servlet:
+    multipart:
+      enabled: true
+      location: C:\\upload\\temp
+      max-file-size: 10MB
+      max-request-size: 20MB
+  datasource:
+    url: jdbc:h2:~/ws
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+    org.springframework.web: trace
