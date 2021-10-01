@@ -2,7 +2,7 @@
 > Spring WebSocket을 사용해보는 리포지토리
 
 <br>
-#### WebSocket을 알아보기전에 Socket에 대해 알고 싶다면 [이 글](https://github.com/VitoJeong/java_socket/blob/master/README.md)를 참고한다.
+#### WebSocket을 알아보기전에 Socket에 대해 알고 싶다면 [이글](https://github.com/VitoJeong/java_socket/blob/master/README.md)를 참고한다.
 <br>
 
 ### 일반적인 http통신을 하는 서버들과 달리 채팅 서버는 socket통신을 하는 서버가 필요하다.
