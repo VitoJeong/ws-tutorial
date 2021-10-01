@@ -19,7 +19,7 @@ import java.util.List;
 @Slf4j
 public class ChatHandler extends TextWebSocketHandler {
 
-    private static List<WebSocketSession> list = new ArrayList<>();
+    private static List<WebSocketSession> socketSessionList = new ArrayList<>();
 
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
@@ -28,8 +28,8 @@ public class ChatHandler extends TextWebSocketHandler {
         log.info("payload : " + payload);
 
         // 접속된 모든 클라이언트에게 메세지를 보낸다.
-        for(WebSocketSession sess: list) {
-            sess.sendMessage(message);
+        for(WebSocketSession socketSession: socketSessionList) {
+            socketSession.sendMessage(message);
         }
     }
 
@@ -37,7 +37,7 @@ public class ChatHandler extends TextWebSocketHandler {
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
 
-        list.add(session);
+        socketSessionList.add(session);
 
         log.info(session + " 클라이언트 접속");
     }
@@ -47,6 +47,6 @@ public class ChatHandler extends TextWebSocketHandler {
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
 
         log.info(session + " 클라이언트 접속 해제");
-        list.remove(session);
+        socketSessionList.remove(session);
     }
 }
