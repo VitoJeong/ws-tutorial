@@ -8,6 +8,7 @@
 
 ### 일반적인 http통신을 하는 서버들과 달리 채팅 서버는 socket통신을 하는 서버가 필요하다.
 
+클라이언트가 먼저 요청하지 않아도 서버가 먼저 데이터를 보내기 위해 WebSocket이 존재하기 전에는 **Polling, Long Polling, Streaming** 등의 방식으로 해결했다.
 
 ### Websocket
 * Websocket은 기존의 단방향 HTTP프로토콜과 호환되어 양방향 통신을 제공하기 위해 개발된 프로토콜
@@ -15,6 +16,11 @@
 * 접속까지는 HTTP 프로토콜을 이용하고 그 이후의 통신은 자체적인 Websocket 프로토콜로 통신하게 된다.
 * 지속적으로 서버와 클라이언트가 high frequency/low latency로 통신해야하는 경우 http보다 WebSocket이 유리하다.
 <br/>
+
+### WebSocket 접속 과정
+
+![image](https://user-images.githubusercontent.com/63029576/135759551-2067cc23-343d-41d6-9153-fe3514eab11a.png)
+웹소켓 접속 과정은 **TCP/IP 접속** 그리고 **웹소켓 열기 HandShake** 과정으로 나눌 수 있다.
 
 ## Spring WebSocket
 
