@@ -20,6 +20,7 @@
 ### WebSocket 접속 과정
 
 ![image](https://user-images.githubusercontent.com/63029576/135759551-2067cc23-343d-41d6-9153-fe3514eab11a.png)
+
 웹소켓 접속 과정은 **TCP/IP 접속** 그리고 **웹소켓 열기 HandShake** 과정으로 나눌 수 있다.
 
 ## Spring WebSocket
